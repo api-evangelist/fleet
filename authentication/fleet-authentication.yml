@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://fleetdm.com/docs/rest-api/rest-api#authentication
+docs: https://fleetdm.com/docs/rest-api/rest-api#authentication
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    Fleet's REST API uses bearer-token authentication. Tokens are obtained by
+    POST /api/v1/fleet/login (email + password) or, for SSO/MFA users, from the
+    "My account" page in the Fleet UI ("Get API token"). API-only users are the
+    recommended pattern for automation because their tokens do not expire, unlike
+    regular user session tokens which expire frequently. SSO is supported for
+    human login (SAML/OIDC IdPs).
+schemes:
+  - name: bearerToken
+    type: http
+    scheme: bearer
+    in: header
+    header: Authorization
+    format: 'Bearer <token>'
+    obtained_via:
+      - endpoint: POST /api/v1/fleet/login
+        description: Email + password login returning a user object and session token.
+      - ui: /profile ("My account" > Get API token)
+        description: Required for SSO/MFA users; API login is disabled for them.
+    sources: [docs]
+  - name: apiOnlyUserToken
+    type: http
+    scheme: bearer
+    in: header
+    header: Authorization
+    description: >-
+      Non-expiring token issued to an API-only user (fleetctl user create
+      --api-only) for automation and GitOps workflows.
+    sources: [docs]
+identity:
+  sso: true
+  sso_protocols: [saml, oidc]
+  mfa: true
