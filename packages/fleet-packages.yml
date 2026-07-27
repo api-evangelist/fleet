@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/fleetctl
+packages:
+  - language: shell
+    registry: npm
+    name: fleetctl
+    url: https://www.npmjs.com/package/fleetctl
+    install: npm install -g fleetctl
+    version: 4.89.1
+    official: true
+    kind: cli-installer
+    description: >-
+      Installer for the fleetctl CLI. When installed via npm, fleetctl updates
+      itself on next run. The binary is also distributed from fleetdm.com/download
+      and GitHub releases.
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/fleetdm/fleet/v4
+    url: https://pkg.go.dev/github.com/fleetdm/fleet/v4
+    install: go get github.com/fleetdm/fleet/v4
+    official: true
+    kind: source-module
+    description: >-
+      Fleet server + fleetctl Go module (the open-source monorepo). Not a
+      dedicated client SDK; the REST API is consumed directly or via fleetctl.
+notes: >-
+  Fleet does not publish a dedicated per-language client SDK library. Programmatic
+  access is via the REST API (bearer token) or the fleetctl CLI. fleetctl is
+  distributed via npm (installer), fleetdm.com/download, and GitHub releases.

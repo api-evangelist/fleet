@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://fleetdm.com/docs/using-fleet/automations
+docs: https://fleetdm.com/docs/using-fleet/automations
+spec_type: Webhooks
+transport: http-post
+delivery: >-
+  Fleet automations POST a JSON payload to an operator-configured webhook URL
+  (arbitrary endpoint). Automations can also open tickets via integrations
+  (e.g. Jira, Zendesk) instead of, or in addition to, raw webhooks.
+webhooks:
+  - name: failing-policies
+    trigger: A policy newly fails on a host (transition from pass/no-response to fail).
+    frequency: Once per day by default (configurable).
+    payload: One webhook request per failing host, including policy and host details.
+  - name: vulnerability
+    trigger: A new CVE is detected (published within the last 30 days by default).
+    frequency: Once per hour by default (vulnerabilities_periodicity).
+    payload: A separate request per affected host, including CVE and software details.
+  - name: host-status
+    trigger: A configured percentage of hosts have not checked in for N days.
+    frequency: Once per day by default.
+    payload: Summary of the offline-host condition.
+  - name: activity-audit
+    trigger: Activities occur in Fleet (queries, scripts, logins, and other audit events).
+    delivery: Sent to configured webhook URLs or log destinations.
+notes: >-
+  Fleet publishes no AsyncAPI document; the event surface is delivered as
+  outbound HTTP webhook automations. Captured here as a webhook catalog.

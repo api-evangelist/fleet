@@ -1,0 +1,55 @@
+generated: '2026-07-19'
+method: searched
+source: https://fleetdm.com/docs/using-fleet/fleetctl-cli
+docs: https://fleetdm.com/docs/using-fleet/fleetctl-cli
+name: fleetctl
+description: >-
+  fleetctl ("Fleet control") is Fleet's first-party command-line interface for
+  managing a Fleet instance: configuring the server, running live osquery queries
+  across hosts, and driving a GitOps workflow that applies declarative YAML
+  configuration to Fleet.
+version: 4.89.1
+install:
+  - method: download
+    command: 'see https://fleetdm.com/download'
+    note: Easiest way to install or update; recommended.
+  - method: npm
+    command: npm install -g fleetctl
+    note: Self-updates on next run when installed via npm.
+  - method: binary
+    command: 'download tar.gz/zip from GitHub releases, extract, place in PATH (e.g. /usr/local/bin)'
+    source: https://github.com/fleetdm/fleet/releases
+auth:
+  note: >-
+    fleetctl authenticates with a Fleet server via `fleetctl login` or
+    `fleetctl config set`; automation should use API-only users (non-expiring
+    tokens). Multiple servers/accounts are managed as named contexts.
+commands:
+  - name: config
+    description: Manage fleetctl configuration and contexts (config set --address, --context).
+  - name: login
+    description: Authenticate with a Fleet server using email/password.
+  - name: logout
+    description: End the current fleetctl session.
+  - name: apply
+    description: Apply declarative YAML configuration (GitOps) to Fleet.
+  - name: gitops
+    description: Run the GitOps workflow that reconciles YAML config against Fleet.
+  - name: get
+    description: Retrieve Fleet objects (queries, policies, teams, hosts, reports, config).
+  - name: query
+    description: Run a live osquery query against selected hosts.
+  - name: user
+    description: Manage users, including `user create --api-only` for automation tokens.
+  - name: package
+    description: Build a fleetd agent installer package (deb, rpm, msi, pkg).
+  - name: preview
+    description: Spin up a local Fleet preview/demo environment with sample data.
+  - name: debug
+    description: Debugging helpers, including `debug archive` for profiling/support bundles.
+  - name: trigger
+    description: Trigger a Fleet cron schedule on demand.
+key_flows:
+  - gitops: Manage Fleet configuration as code in a Git repo and apply with `fleetctl gitops`.
+  - live_query: Run ad-hoc osquery queries fleet-wide with `fleetctl query`.
+  - agent_packaging: Build fleetd installers per-platform with `fleetctl package`.

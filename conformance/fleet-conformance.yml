@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://fleetdm.com/docs/rest-api/rest-api
+standards:
+  - id: bearer-token-auth
+    conforms: true
+    evidence: REST API uses Authorization Bearer token authentication.
+  - id: oauth2
+    conforms: false
+    evidence: No oauth2 securityScheme; API uses bearer session/API tokens (SSO/OIDC is for human login only).
+  - id: oidc-sso
+    conforms: true
+    evidence: SSO login supports SAML and OIDC identity providers.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom JSON envelope (message/errors[]/uuid), not application/problem+json.
+  - id: rfc6585-429
+    conforms: true
+    evidence: Rate limiting returns 429 with a retry-after header.
+  - id: pagination
+    conforms: true
+    evidence: page/per_page/order_key/order_direction query parameters on list endpoints.
+  - id: soc2-type2
+    conforms: true
+    evidence: SOC 2 Type 2 attested; see https://trust.fleetdm.com/ and SECURITY.md (security-labeled issues maintained for SOC2 compliance).
+  - id: iso-27001
+    conforms: false
+    evidence: Listed as "coming soon" on fleetdm.com; not yet certified.
+  - id: osquery
+    conforms: true
+    evidence: Fleet is built on osquery; hosts run the osquery agent (fleetd).
+compliance_program:
+  soc2_type2: true
+  iso27001: coming-soon
+  trust_center: https://trust.fleetdm.com/

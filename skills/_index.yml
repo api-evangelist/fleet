@@ -1,0 +1,7 @@
+generated: '2026-07-19'
+method: generated
+skills:
+  - file: fleet-manage-teams.md
+    name: Manage Fleet teams
+    api: openapi/fleet-premium-openapi.json
+    operations: [listTeams, createTeam, getTeam, deleteTeam]

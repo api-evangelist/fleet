@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/fleetdm/fleet/releases
+versioning:
+  scheme: uri-path
+  current: v1
+  base_path: /api/v1/fleet
+  product_version: 4.89.1
+  product_scheme: semver
+  note: >-
+    The REST API is versioned in the URI path (/api/v1/). The Fleet product
+    itself ships on a fast semver cadence (roughly weekly minor/patch releases).
+release_cadence:
+  frequency: ~weekly
+  recent:
+    - fleet-v4.89.1 (2026-07-16)
+    - fleet-v4.89.0 (2026-07-15)
+    - fleet-v4.88.1 (2026-07-10)
+    - fleet-v4.88.0 (2026-07-02)
+  releases_url: https://github.com/fleetdm/fleet/releases
+changelog:
+  url: https://github.com/fleetdm/fleet/blob/main/CHANGELOG.md
+  ref: changelog/fleet-changelog.yml
+status_page: https://status.fleetdm.com
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No formal published API deprecation policy or RFC 8594 Sunset header support
+    was found. Breaking changes are called out in the CHANGELOG per release.
+deprecated_operations: []

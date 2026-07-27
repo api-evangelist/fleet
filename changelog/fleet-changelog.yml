@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/fleetdm/fleet/blob/main/CHANGELOG.md
+docs: https://github.com/fleetdm/fleet/blob/main/CHANGELOG.md
+scheme: semver
+current_version: 4.89.1
+cadence: ~weekly
+sections_per_entry: [IT Admins, Security Engineers, Bug fixes and improvements]
+entries:
+  - version: 4.89.1
+    date: '2026-07-16'
+    breaking: false
+    highlights:
+      - Fixed Windows 11 25H2 MDM enrollment failure (error 80180006) by accepting any MS-MDE2 discovery RequestVersion at or above the minimum supported version.
+  - version: 4.89.0
+    date: '2026-07-15'
+    breaking: false
+    highlights:
+      - Added include/exclude label targeting for policies.
+      - Added POST /api/v1/fleet/policies/:policy_id/reset to reset a policy's pass/fail results.
+      - Added GET /api/v1/fleet/policies/:id/automation_activities to list policy automation activities.
+      - Added ability to keep Fleet-maintained apps auto-updated, pinned, or rolled back (Premium).
+      - Added Google Workspace integration mapping IdP users to hosts for host vitals.
+      - Added private-network IP blocking to Fleet's HTTP client (loopback and cloud metadata always blocked).
+  - version: 4.88.1
+    date: '2026-07-10'
+    breaking: false
+  - version: 4.88.0
+    date: '2026-07-02'
+    breaking: false

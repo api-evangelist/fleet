@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://fleetdm.com/docs/rest-api/rest-api
+docs: https://fleetdm.com/docs/rest-api/rest-api
+format: custom-json
+envelope:
+  content_type: application/json
+  fields:
+    message: Human-readable error description.
+    errors: Array of objects, each with `name` and `reason`.
+    uuid: Unique identifier for correlating the error with server logs.
+  note: >-
+    Fleet does not use RFC 9457 application/problem+json. Errors return a custom
+    JSON envelope. HTTP status codes below carry the semantics.
+problems:
+  - status: 400
+    title: Bad request
+    meaning: Malformed request or invalid parameters.
+  - status: 401
+    title: Authentication required / invalid token
+    meaning: Missing or invalid bearer token.
+  - status: 403
+    title: Forbidden
+    meaning: Authenticated user lacks the role/permission for the resource (RBAC).
+  - status: 404
+    title: Resource not found
+    meaning: The requested object does not exist or is not visible to the caller.
+  - status: 409
+    title: Conflict
+    meaning: Resource conflict (e.g. duplicate name).
+  - status: 422
+    title: Validation error
+    meaning: Request body failed validation; `errors[]` names the failing fields.
+  - status: 429
+    title: Too many requests
+    meaning: Rate limit exceeded. Response includes a retry-after header (seconds).
+  - status: 500
+    title: Internal server error
+    meaning: Unexpected server-side error; the `uuid` can be shared with support.

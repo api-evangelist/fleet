@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: searched
+source: https://fleetdm.com/docs/rest-api/rest-api
+docs: https://fleetdm.com/docs/rest-api/rest-api
+authentication:
+  style: bearer-token
+  header: 'Authorization: Bearer <token>'
+  ref: authentication/fleet-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  base_path: /api/v1/fleet
+  ref: lifecycle/fleet-lifecycle.yml
+pagination:
+  style: page-number
+  params:
+    - name: page
+      description: Page number of the results to fetch (0-indexed).
+    - name: per_page
+      description: Results per page.
+    - name: order_key
+      description: Column to order results by.
+    - name: order_direction
+      description: asc or desc (default asc).
+  max_records: 10000
+  notes: >-
+    List endpoints accept page/per_page plus order_key/order_direction. Many list
+    endpoints also accept a `query` keyword-search parameter.
+idempotency:
+  supported: false
+  notes: >-
+    Fleet does not document an Idempotency-Key header. Mutating operations are
+    plain REST verbs (POST/PATCH/DELETE); GitOps `fleetctl apply`/`gitops`
+    provides declarative, convergent (idempotent-by-reconciliation) config
+    management as the recommended safe-retry pattern.
+error_envelope:
+  shape:
+    message: Human-readable error description.
+    errors: Array of objects with `name` and `reason`.
+    uuid: Unique identifier for tracing the error server-side.
+  content_type: application/json
+  ref: errors/fleet-problem-types.yml
+rate_limiting:
+  signal: 429 Too Many Requests
+  retry_header: retry-after
+  notes: The retry-after header reports the number of seconds to wait before retrying.
+request_tracing:
+  error_uuid: Every error response includes a `uuid` for correlating with server logs.
+config_as_code:
+  gitops: true
+  format: YAML applied via `fleetctl apply` / `fleetctl gitops`

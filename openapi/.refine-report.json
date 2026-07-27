@@ -1,0 +1,14 @@
+{
+  "provider": "fleet",
+  "sources": [
+    "fleet-fleet-api-openapi.yml"
+  ],
+  "outputs": [
+    "fleet-fleet-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

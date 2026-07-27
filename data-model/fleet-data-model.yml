@@ -1,0 +1,63 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/fleet-premium-openapi.json
+docs: https://fleetdm.com/docs/rest-api/rest-api
+note: >-
+  Entity graph derived from the published Fleet Premium OpenAPI (Team schema) and
+  enriched from the REST API object reference. The full Fleet domain is larger
+  than the OpenAPI subset; core domain entities are listed with their documented
+  relationships.
+entities:
+  - name: Team
+    source: openapi/fleet-premium-openapi.json#/components/schemas/Team
+    fields: [id, name, description, agent_options, secrets]
+    relationships:
+      - type: has_many
+        target: Host
+        via: team_id
+      - type: has_many
+        target: EnrollSecret
+        via: secrets
+      - type: has_many
+        target: Policy
+        via: team_id
+  - name: Host
+    fields: [id, hostname, uuid, platform, team_id, status]
+    relationships:
+      - type: belongs_to
+        target: Team
+        via: team_id
+      - type: has_many
+        target: Software
+        via: host_id
+      - type: has_many
+        target: Policy
+        via: host_id
+  - name: Policy
+    relationships:
+      - type: belongs_to
+        target: Team
+        via: team_id
+  - name: Query
+    relationships:
+      - type: has_many
+        target: Host
+        via: query_id
+  - name: Software
+    relationships:
+      - type: has_many
+        target: Vulnerability
+        via: cve
+  - name: Vulnerability
+    fields: [cve, cvss_score]
+  - name: EnrollSecret
+    fields: [secret, created_at, team_id]
+    relationships:
+      - type: belongs_to
+        target: Team
+        via: team_id
+  - name: User
+    relationships:
+      - type: has_many
+        target: Team
+        via: teams

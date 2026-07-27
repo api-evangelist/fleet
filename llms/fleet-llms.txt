@@ -1,0 +1,30 @@
+# Fleet
+
+> Fleet is an open-source device management platform built on osquery — cross-platform MDM, endpoint telemetry, vulnerability management, software/patch management, and GitOps-driven configuration for macOS, Windows, Linux, iOS, and Android. Fleet exposes a versioned REST API (bearer-token auth) and the fleetctl CLI.
+
+## APIs
+- [Fleet REST API docs](https://fleetdm.com/docs/rest-api/rest-api): Full REST API reference (/api/v1/fleet), bearer-token auth.
+- [Fleet Premium API (OpenAPI)](https://raw.githubusercontent.com/fleetdm/fleet/main/tools/terraform/openapi.json): First-party OpenAPI subset covering teams.
+
+## Specs
+- openapi/fleet-premium-openapi.json — Fleet Premium API (teams) OpenAPI 3.0.
+- authentication/fleet-authentication.yml — bearer-token auth profile (login + API-only users, SSO/MFA).
+- conventions/fleet-conventions.yml — pagination, error envelope, rate limiting, versioning, GitOps.
+- errors/fleet-problem-types.yml — error envelope (message/errors[]/uuid) and status semantics.
+- data-model/fleet-data-model.yml — core entity graph (Team, Host, Policy, Query, Software, Vulnerability).
+- asyncapi/fleet-webhooks.yml — webhook automations (failing policies, vulnerabilities, host status, activity).
+
+## Docs
+- [Getting started](https://fleetdm.com/docs/get-started/anatomy): Fleet concepts and anatomy.
+- [fleetctl CLI](https://fleetdm.com/docs/using-fleet/fleetctl-cli): CLI install and command surface.
+- [Automations & webhooks](https://fleetdm.com/docs/using-fleet/automations): Outbound webhook automations.
+- [Changelog](https://github.com/fleetdm/fleet/blob/main/CHANGELOG.md): Per-release notes (~weekly).
+- [Status](https://status.fleetdm.com): Service status page.
+
+## Security
+- [Security policy](https://github.com/fleetdm/fleet/blob/main/SECURITY.md): VDP on Bugbop + security@fleetdm.com (PGP).
+- [Trust center](https://trust.fleetdm.com/): SOC 2 Type 2; ISO 27001 coming soon.
+
+## Source
+- [GitHub: fleetdm/fleet](https://github.com/fleetdm/fleet): Open-source monorepo (server, fleetctl, agent).
+- [fleetctl on npm](https://www.npmjs.com/package/fleetctl): CLI installer.

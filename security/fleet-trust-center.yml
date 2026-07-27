@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: searched
+source: https://trust.fleetdm.com/
+probe: false
+url: https://trust.fleetdm.com/
+certifications:
+  - name: SOC 2 Type 2
+    status: certified
+  - name: ISO 27001
+    status: coming-soon
+evidence:
+  - {source: 'https://trust.fleetdm.com/', keywords: [trust center]}
+  - {source: 'https://fleetdm.com/better', keywords: [soc2 type 2, iso 27001]}
+  - {source: 'https://github.com/fleetdm/fleet/blob/main/SECURITY.md', keywords: [soc2 compliance]}
+notes: >-
+  Fleet's trust center is hosted at trust.fleetdm.com (SafeBase-style portal).
+  SOC 2 Type 2 is attested; ISO 27001 is listed as coming soon. Security-labeled
+  GitHub issues are maintained to support SOC 2 compliance.

@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: searched
+host: https://fleetdm.com
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+notes: >-
+  No /.well-known discovery documents are published at fleetdm.com. The security
+  policy lives at github.com/fleetdm/fleet/blob/main/SECURITY.md rather than a
+  RFC 9116 security.txt. Recorded for auditability; no WellKnown/SecurityTxt
+  pointer emitted since nothing returned 200.

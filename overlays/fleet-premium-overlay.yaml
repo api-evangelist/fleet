@@ -1,0 +1,31 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Fleet Premium API
+  version: 1.0.0
+extends: openapi/fleet-premium-openapi.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: fleet
+      x-apievangelist-review: This spec is a small first-party subset (teams). The full REST API is documented at fleetdm.com/docs/rest-api/rest-api.
+      x-api-base-path: /api/v1/fleet
+  - target: $.info
+    update:
+      x-authentication: bearer-token
+      x-authentication-docs: https://fleetdm.com/docs/rest-api/rest-api#authentication
+  - target: $.paths['/api/v1/fleet/teams'].get
+    update:
+      operationId: listTeams
+      tags: [Teams]
+  - target: $.paths['/api/v1/fleet/teams'].post
+    update:
+      operationId: createTeam
+      tags: [Teams]
+  - target: $.paths['/api/v1/fleet/teams/{id}'].get
+    update:
+      operationId: getTeam
+      tags: [Teams]
+  - target: $.paths['/api/v1/fleet/teams/{id}'].delete
+    update:
+      operationId: deleteTeam
+      tags: [Teams]

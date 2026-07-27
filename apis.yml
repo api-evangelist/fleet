@@ -1,9 +1,27 @@
 aid: fleet
 name: Fleet
-description: 'Fleet is a company surfaced as a portfolio company of crv and added to the API Evangelist
-  network as a stub for enrichment. Sector: developer-tools. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Fleet is an open-source device management platform built on osquery. It provides
+  cross-platform MDM, endpoint telemetry, vulnerability and patch management,
+  software inventory, and GitOps-driven configuration for macOS, Windows, Linux,
+  iOS, and Android fleets. Fleet exposes a versioned REST API (/api/v1/fleet,
+  bearer-token auth), the fleetctl CLI for live queries and config-as-code, and
+  outbound webhook automations. It is developed in the open at github.com/fleetdm/fleet
+  and backed by CRV.
 url: https://raw.githubusercontent.com/api-evangelist/fleet/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/70264713?v=4
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,11 +30,38 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Developer Tools
-apis: []
+- Device Management
+- MDM
+- Endpoint Security
+- Vulnerability Management
+- osquery
+- Open Source
+- DevOps
+apis:
+- aid: fleet:fleet-fleet-api
+  name: Fleet Fleet API
+  description: The Fleet API from Fleet — 2 operation(s) for fleet.
+  humanURL: https://fleetdm.com/docs/rest-api/rest-api
+  baseURL: https://rbx.cloud.fleetdm.com/api/v1/fleet
+  tags:
+  - Fleet
+  properties:
+  - type: OpenAPI
+    url: openapi/fleet-fleet-api-openapi.yml
+  - type: Authentication
+    url: authentication/fleet-authentication.yml
+  - type: Conventions
+    url: conventions/fleet-conventions.yml
+  - type: ErrorCatalog
+    url: errors/fleet-problem-types.yml
+  - type: DataModel
+    url: data-model/fleet-data-model.yml
+  - type: AgenticAccess
+    url: agentic-access/fleet-agentic-access.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +70,70 @@ maintainers:
 common:
 - type: Website
   url: https://fleetdm.com/
+- type: DeveloperPortal
+  url: https://fleetdm.com/docs
+- type: Documentation
+  url: https://fleetdm.com/docs
+- type: APIReference
+  url: https://fleetdm.com/docs/rest-api/rest-api
+- type: GettingStarted
+  url: https://fleetdm.com/docs/get-started/anatomy
+- type: Support
+  url: https://fleetdm.com/support
+- type: Blog
+  url: https://fleetdm.com/articles
+- type: GitHubOrganization
+  url: https://github.com/fleetdm
+- type: Pricing
+  url: https://fleetdm.com/pricing
+- type: SignUp
+  url: https://fleetdm.com/register
+- type: TermsOfService
+  url: https://fleetdm.com/legal/terms
+- type: PrivacyPolicy
+  url: https://fleetdm.com/legal/privacy
+- type: StatusPage
+  url: https://status.fleetdm.com
+- type: ChangeLog
+  url: changelog/fleet-changelog.yml
+- type: Lifecycle
+  url: lifecycle/fleet-lifecycle.yml
+- type: CLI
+  url: cli/fleet-cli.yml
+- type: Packages
+  url: packages/fleet-packages.yml
+- type: Authentication
+  url: authentication/fleet-authentication.yml
+- type: Conventions
+  url: conventions/fleet-conventions.yml
+- type: ErrorCatalog
+  url: errors/fleet-problem-types.yml
+- type: DataModel
+  url: data-model/fleet-data-model.yml
+- type: Conformance
+  url: conformance/fleet-conformance.yml
+- type: Compliance
+  url: https://trust.fleetdm.com/
+- type: TrustCenter
+  url: security/fleet-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/fleet-vulnerability-disclosure.yml
+- type: Security
+  url: https://github.com/fleetdm/fleet/blob/main/SECURITY.md
+- type: DomainSecurity
+  url: security/fleet-domain-security.yml
+- type: Webhooks
+  url: asyncapi/fleet-webhooks.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: AgenticAccess
+  url: agentic-access/fleet-agentic-access.yml
+- type: Overlay
+  url: overlays/fleet-premium-overlay.yaml
+- type: LLMsTxt
+  url: llms/fleet-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
