@@ -68,6 +68,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: MCPServer
+  url: mcp/fleet-mcp.yml
 - type: Website
   url: https://fleetdm.com/
 - type: DeveloperPortal
