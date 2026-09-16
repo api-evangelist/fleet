@@ -1,13 +1,10 @@
 aid: fleet
 name: Fleet
-description: >-
-  Fleet is an open-source device management platform built on osquery. It provides
-  cross-platform MDM, endpoint telemetry, vulnerability and patch management,
-  software inventory, and GitOps-driven configuration for macOS, Windows, Linux,
-  iOS, and Android fleets. Fleet exposes a versioned REST API (/api/v1/fleet,
-  bearer-token auth), the fleetctl CLI for live queries and config-as-code, and
-  outbound webhook automations. It is developed in the open at github.com/fleetdm/fleet
-  and backed by CRV.
+description: Fleet is an open-source device management platform built on osquery. It provides cross-platform
+  MDM, endpoint telemetry, vulnerability and patch management, software inventory, and GitOps-driven configuration
+  for macOS, Windows, Linux, iOS, and Android fleets. Fleet exposes a versioned REST API (/api/v1/fleet,
+  bearer-token auth), the fleetctl CLI for live queries and config-as-code, and outbound webhook automations.
+  It is developed in the open at github.com/fleetdm/fleet and backed by CRV.
 url: https://raw.githubusercontent.com/api-evangelist/fleet/refs/heads/main/apis.yml
 deliveryModel:
   model: saas
@@ -43,7 +40,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-09-16'
 tags:
 - Company
 - Developer Tools
@@ -66,7 +63,7 @@ tags_raw:
 - DevOps
 apis:
 - aid: fleet:fleet-fleet-api
-  name: Fleet Fleet API
+  name: Fleet API
   description: The Fleet API from Fleet — 2 operation(s) for fleet.
   humanURL: https://fleetdm.com/docs/rest-api/rest-api
   baseURL: https://rbx.cloud.fleetdm.com/api/v1/fleet
@@ -93,7 +90,10 @@ maintainers:
 common:
 - type: X-MCPServerCandidate
   url: mcp/fleet-mcp.yml
-  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate
+    — a tool list derived from the published API contracts, not an existing server. The scorer already
+    read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type
+    surfaces with a server that does not exist.'
 - type: Website
   url: https://fleetdm.com/
 - type: DeveloperPortal
