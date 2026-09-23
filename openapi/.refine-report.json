@@ -1,7 +1,7 @@
 {
   "provider": "fleet",
   "sources": [
-    "fleet-fleet-api-openapi.yml"
+    "_original/fleet-premium-openapi.json"
   ],
   "outputs": [
     "fleet-fleet-api-openapi.yml"
@@ -9,6 +9,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "fleet-premium-openapi.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "fleet-premium-openapi.json: tagged paths GET /api/v1/fleet/teams -> Fleet",
+    "fleet-premium-openapi.json: tagged paths POST /api/v1/fleet/teams -> Fleet",
+    "fleet-premium-openapi.json: tagged paths GET /api/v1/fleet/teams/{id} -> Fleet",
+    "fleet-premium-openapi.json: tagged paths DELETE /api/v1/fleet/teams/{id} -> Fleet",
+    "fleet-premium-openapi.json: declared missing tag: Fleet",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "fleet-fleet-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
