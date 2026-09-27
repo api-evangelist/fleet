@@ -49,7 +49,7 @@ tags:
 - Endpoint Security
 - Vulnerability Management
 - osquery
-- Open-Source
+- Open Source
 - DevOps
 tags_raw:
 - Company
@@ -61,6 +61,7 @@ tags_raw:
 - osquery
 - Open Source
 - DevOps
+- Open-Source
 apis:
 - aid: fleet:fleet-fleet-api
   name: Fleet API
