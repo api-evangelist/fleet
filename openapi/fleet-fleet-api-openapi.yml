@@ -115,17 +115,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    TeamCreateRequest:
-      type: object
-      properties:
-        name:
-          type: string
-        description:
-          type: string
-        agent_options:
-          type: string
-      required:
-      - name
     Team:
       type: object
       properties:
@@ -149,3 +138,14 @@ components:
                 format: date-time
               team_id:
                 type: integer
+    TeamCreateRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        agent_options:
+          type: string
+      required:
+      - name
