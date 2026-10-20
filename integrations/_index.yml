@@ -46,3 +46,54 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: fleet-winget-windows-package-manager
+  label: winget (Windows Package Manager)
+  partner_name: winget (Windows Package Manager)
+  category: official CLI (winget (Windows Package Manager))
+  type: register
+  channel: package-registry
+  evidence: https://github.com/microsoft/winget-pkgs/tree/master/manifests/f/Fleet/fleetctl
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: winget (Windows Package Manager) (public package index)
+    spec_file: null
+    packages:
+    - name: Fleet.fleetctl
+      kind: manifest
+      version: 4.93.1
+      released: '2026-10-20'
+      lapsed: false
+      page: https://github.com/microsoft/winget-pkgs/tree/master/manifests/f/Fleet/fleetctl
+      cli: 'winget: A command line interface (CLI) tool for managing Fleet from the command line.'
+      repo_leg: github-org:fleetdm
+      publisher_leg: artifact-github-org:fleetdm
+      matched_by: github-org
+    current: true
+    signal_note: 'the provider''s own command-line tool on a package manager: distribution, not an integration;
+      lapsed = no release in 24 months or deprecated / disabled by the manager'
+    detected_by: sweep-official-clis.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
+- slug: fleet-skillsmp-skillsmp-com
+  label: SkillsMP (skillsmp.com)
+  partner_name: SkillsMP (skillsmp.com)
+  category: Agent Skills register
+  type: register
+  channel: standard-directory
+  evidence: https://skillsmp.com/creators/fleetdm
+  source: edge
+  relationship: compatible
+  contract_reference:
+    register: SkillsMP (skillsmp.com) (public sitemap / list)
+    spec_file: null
+    standard: Agent Skills (agentskills.io)
+    role: agent-skills-listing
+    matched_org: fleetdm
+    matched_by: org-profile-domain:fleetdm.com
+    sample_skills: []
+    detected_by: sweep-agent-skills.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
