@@ -29,16 +29,32 @@ edges:
     detected: '2026-10-18'
   detected_by: sweep-official-sdks.py
   first_seen: '2026-10-18'
+- partner_name: Microsoft Intune (partner connector docs)
+  partner: microsoft-intune
+  partner_match: mirror
+  mirror_match: domain
+  type: docs
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  evidence: https://learn.microsoft.com/en-us/intune/device-security/compliance/third-party-partners#supported-device-compliance-partners
+  mirror_of: microsoft-intune/integrations/microsoft-intune-integration-edges.yml
+  apps:
+  - Fleet
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Intune third-party device compliance partner
 generated: '2026-10-18'
 method: searched
 source:
-- https://api.nuget.org/v3
-- https://crates.io/api/v1
-- https://proxy.golang.org
-- https://pypi.org/pypi
 - https://registry.npmjs.org
-- https://repo1.maven.org/maven2
+- https://pypi.org/pypi
 - https://rubygems.org/api/v1
+- https://crates.io/api/v1
+- https://repo1.maven.org/maven2
+- https://api.nuget.org/v3
+- https://proxy.golang.org
 checked:
 - https://api.nuget.org/v3
 - https://crates.io/api/v1
@@ -47,3 +63,4 @@ checked:
 - https://registry.npmjs.org
 - https://repo1.maven.org/maven2
 - https://rubygems.org/api/v1
+- microsoft-intune/integrations/microsoft-intune-integration-edges.yml
