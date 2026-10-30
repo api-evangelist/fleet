@@ -64,6 +64,131 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Fleet is a company surfaced as a portfolio company of crv and added to the API Evangelist network as a stub for enrichment. Sector: developer-tools. This profile is a lead awaiting the enrichment pipeline.
+Fleet is an open-source device management platform built on osquery. It provides cross-platform MDM, endpoint telemetry, vulnerability and patch management, software inventory, and GitOps-driven configuration for macOS, Windows, Linux, iOS, and Android fleets. Fleet exposes a versioned REST API (/api/v1/fleet, bearer-token auth), the fleetctl CLI for live queries and config-as-code, and outbound webhook automations. It is developed in the open at github.com/fleetdm/fleet and backed by CRV.
 
-Backed by: crv — https://fleetdm.com/
+**Areas:** Company · Developer Tools · Device Management · MDM · Endpoint Security · Vulnerability Management · osquery · Open Source · DevOps
+
+## Fleet on APIs.io
+
+Everything profiled for Fleet is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fleet/](https://apis.io/providers/fleet/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Fleet API](https://apis.io/apis/fleet/fleet-fleet-api/) — The Fleet API from Fleet — 2 operation(s) for fleet.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Fleet Webhooks](https://apis.io/asyncapis/fleet/fleet-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [fleet](https://apis.io/servers/fleet/fleet/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Fleet Agentic Access](https://apis.io/agentic-access/fleet/fleet-agentic-access/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [Premium Fleet API](https://apis.io/collections/fleet/open-fleet-fleet-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Fleet Premium Overlay](https://apis.io/overlays/fleet/fleet-premium-overlay/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Fleet Authentication](https://apis.io/security/fleet/fleet-authentication/)
+- [Fleet Domain Security](https://apis.io/security/fleet/fleet-domain-security/)
+- [Fleet Trust Center](https://apis.io/security/fleet/fleet-trust-center/)
+- [Fleet Vulnerability Disclosure](https://apis.io/security/fleet/fleet-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://fleetdm.com/)
+- [Documentation](https://fleetdm.com/docs)
+- [Getting started](https://fleetdm.com/docs/get-started/anatomy)
+- [API reference](https://fleetdm.com/docs/rest-api/rest-api)
+- [Pricing](https://fleetdm.com/pricing)
+- [Sign up](https://fleetdm.com/register)
+- [Support](https://fleetdm.com/support)
+- [Blog](https://fleetdm.com/articles)
+- [Security](https://github.com/fleetdm/fleet/blob/main/SECURITY.md)
+- [Compliance](https://trust.fleetdm.com/)
+- [Terms of service](https://fleetdm.com/legal/terms)
+- [Privacy policy](https://fleetdm.com/legal/privacy)
+- [GitHub](https://github.com/fleetdm)
+- [Status](https://status.fleetdm.com)
+
+## API Evangelist rating
+
+**Kin Score 55.2** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 44.9 |
+| Contract governance | 18.2 |
+| Operational transparency | 52.6 |
+| Developer ergonomics | 66.1 |
+| Access clarity | 60.5 |
+
+**Agent readiness 26.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/fleet/](https://apis.io/providers/fleet/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Fleet: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fleet/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
